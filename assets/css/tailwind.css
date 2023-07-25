@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'ObjectSans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('~/assets/fonts/object-sans/ObjectSans-Regular.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'ObjectSans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('~/assets/fonts/object-sans/ObjectSans-Heavy.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ObjectSans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('~/assets/fonts/object-sans/ObjectSans-Slanted.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'ObjectSans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('~/assets/fonts/object-sans/ObjectSans-HeavySlanted.otf')
+    format('opentype');
+}
+
+html {
+  @apply bg-gray-50
+}
+
+input[type='checkbox'] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  content: none;
+  height: 24px;
+  width: 24px;
+  @apply bg-white
+}
+
+input[type='checkbox']:before {
+  content: '✓';
+  height: 24px;
+  width: 24px;
+  color: transparent !important;
+  @apply flex justify-center items-baseline border border-gray-300 bg-white
+}
+
+input[type='checkbox']:checked:before {
+  color: black !important;
+  /* @apply bg-orange border-orange */
+}
